@@ -13,14 +13,14 @@ public class SelectionSort {
         int maxSize = 10;
         int maxValue = 200;
         boolean succeed = true;
-        //测试500w次校验算法是否有误
+        //测试5w次校验算法是否有误
         for (int i = 0;i<testCount;i++){
             int[] arr1 = generateRandomArray(maxSize, maxValue);
             int[] arr2 = arrayCopy(arr1);
             selectSort(arr1);
-            System.out.println(Arrays.toString(arr1));
+            //System.out.println(Arrays.toString(arr1));
             Arrays.sort(arr2);
-            System.out.println(Arrays.toString(arr2));
+            //System.out.println(Arrays.toString(arr2));
             if (!isEqual(arr1, arr2)) {
                 succeed = false;
                 printArray(arr1);
